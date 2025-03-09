@@ -4,7 +4,7 @@ Cat::Cat(void) : Animal(){
 	std::cout << "Cat constructor is called" << std::endl;
 	std::cout << "allocation the heap allocation for Brain" << std::endl;
 	type = "Cat";
-	ideas = new Brain();
+	brain = new Brain();
 }
 
 Cat::Cat(Cat const &copy) : Animal(copy)
@@ -16,14 +16,14 @@ Cat::Cat(Cat const &copy) : Animal(copy)
 Cat::~Cat(void) {
 	std::cout << "Cat deconstructor is called" << std::endl;
 	std::cout << "Freeing the heap allocation for Brain" << std::endl;
-	delete ideas;
+	delete brain;
 }
 
 Cat const	&Cat::operator = (Cat const &other)
 {
 	std::cout << "Cat Copy Assignment Constructor" << std::endl;
-
-	(void)other;
+	this->type = other.type;
+	*brain = *other.brain;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 class Brain
 {
 	private:
-		std::string str[100];
+		std::string ideas[100];
 	public :
 		Brain(void);
 		Brain(Brain const &copy);

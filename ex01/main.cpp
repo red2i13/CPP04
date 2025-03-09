@@ -4,7 +4,6 @@
 
 
 
-//todo add message in constructor and destroctor
 int main(){
 	Animal *savana[10];
 
@@ -14,9 +13,17 @@ int main(){
 	}
 
 	//instances of cats
-	for(int i = 5 ; i < 10 ; i++){
+	for(int i = 5 ; i < 9 ; i++){
 		savana[i] = new Cat();
 	}
+	//instances of animal
+	savana[9] = new Animal();
+	
+
+	//testing the sound
+	savana[0]->makeSound();
+	savana[5]->makeSound();
+	savana[9]->makeSound();
 
 	//deleting the animals
 	for(int i = 0; i < 10; i++){

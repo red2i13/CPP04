@@ -6,7 +6,7 @@
 class Cat : public Animal
 {
 	private:
-		Brain *ideas;
+		Brain *brain;
 	public :
 		Cat(void);
 		Cat(Cat const &copy);
