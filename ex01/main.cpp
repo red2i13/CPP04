@@ -5,6 +5,11 @@
 
 
 int main(){
+
+	//check if the copy constructor is deep copy
+	Dog a;
+	Dog b = a;
+
 	Animal *savana[10];
 
 	//instances of dogs

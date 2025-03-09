@@ -10,7 +10,9 @@ Cat::Cat(void) : Animal(){
 Cat::Cat(Cat const &copy) : Animal(copy)
 {
 	std::cout << "Cat Copy Constructor" << std::endl;
-	*this = copy;
+	this->brain = new Brain();
+	*brain = *copy.brain;
+	this->type = copy.type;
 }
 
 Cat::~Cat(void) {
@@ -22,6 +24,7 @@ Cat::~Cat(void) {
 Cat const	&Cat::operator = (Cat const &other)
 {
 	std::cout << "Cat Copy Assignment Constructor" << std::endl;
+	this->brain = new Brain();
 	this->type = other.type;
 	*brain = *other.brain;
 	return (*this);

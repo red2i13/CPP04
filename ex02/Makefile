@@ -1,4 +1,4 @@
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 CC = c++
 NAME = Animal
 FILES = main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
